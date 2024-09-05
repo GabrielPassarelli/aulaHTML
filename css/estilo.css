@@ -1,0 +1,11 @@
+h1{
+    color:red
+}
+
+.titulo{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    font-size: 22pt;
+    color:blueviolet;
+    text-align: center;
+    margin-bottom: 4px;
+}

@@ -3,9 +3,14 @@ from flask import Flask # Import
 app = Flask(__name__) # cria uma instância
 
 @app.route("/", methods=('GET',)) # Assina uma rota
-def index(): # função responsável pela página
+def index(): 
+  nome='Rodrigo' #use o seu nome
+  #HTML retornado
+  return f"""<h1>Página Inicial</h1>
+   <p>Olá {nome}, que nome bonito!
+   """# função responsável pela página
 
-  return "<h1>Página inicial</h1> <p>Eu sou fulano</p> <hr>" # HTML retornado|
+ # HTML retornado|
 
 @app.route("/outra_pagina", methods =('GET',))
 def outra():
@@ -22,4 +27,11 @@ def contato():
 @app.route("/sobre", methods =('GET',))
 def sobre():
   return "<h1>sobre</h1>"
+
+def index(): # função responsável pela página
+  nome='Rodrigo' #use o seu nome
+  #HTML retornado
+  return f"""<h1>Página Inicial</h1>
+   <p>Olá {nome}, que nome bonito!
+   """
 

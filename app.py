@@ -46,9 +46,7 @@ def par_ou_impar(numero):
   else:
     return f"O número {numero} é ímpar."
   
-@app.route("/sobrenome", methods=('GET',))
-def nomesobrenome():
-  nome = request.args.get('nome')
-  sobrenome = request.args.get('sobrenome')
+@app.route("/sobrenome/<string:nome>/<string:sobrenome>", methods=('GET',))
+def nomesobrenome(sobrenome, nome):
   return f"""<h1> sobrenome </h1>
   <p>{sobrenome},{nome}</p>"""

@@ -34,10 +34,8 @@ def index(): # função responsável pela página
    <p>Olá {nome}, que nome bonito!
    """
 
-@app.route("/area")
-def area():
-  altura = float (request.args.get('a'))
-  largura = float(request.args.get('l'))
+@app.route("/area/<float:largura>/<float:altura>")
+def area(largura: float, altura:float):
   return f""" 
 <h1> A área informada> L={largura}* A={altura} Area={largura*altura}</h1>"""
 
